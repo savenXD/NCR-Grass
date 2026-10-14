@@ -10,7 +10,7 @@ export function Audiences() {
             eyebrow="Who we serve"
             title="Lawns for every kind of space"
             description="From sprawling farmhouses to corporate campuses, we turn bare ground into green."
-            className="mx-auto text-center"
+            className="lg:mx-auto lg:text-center"
           />
         }
       />

@@ -228,7 +228,13 @@
 html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-/* Film grain behind all content (sits on the green page background only). Static SVG noise (rendered once), no JS. */
+/* Film grain behind all content (sits on the green page background only). Static SVG noise (rendered once), no JS.
+   Mobile: same look painted straight onto body (alpha 0.3 = 0.6 noise x 0.5 opacity) with no fixed/blended layer, which is cheap to paint on phones. */
+@media (max-width: 767px) {
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+}
 @media (min-width: 768px) {
 body::before {
   content: "";
