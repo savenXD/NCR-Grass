@@ -1,0 +1,16 @@
+# Cursor Rules for NCR Grass
+# Single Source of Truth: Consult CLAUDE.md, AGENTS.md, and /docs for full context.
+
+- Core Goal: Rank high on Google for local searches (lawn installation, natural grass, farmhouse lawns) and turn visitors into enquiries. SEO and speed > visuals.
+- Technology: Next.js (App Router, RSC by default) + TypeScript + Tailwind CSS v4 + shadcn/ui (default component library, do not add any other UI library without asking) + Lucide React + React Hook Form + Zod.
+- Free Stack Only: Ask before adding any paid service or API key.
+- Undecided Items: Do NOT assume design/colors/fonts, business location, or page list/copy. Use neutral placeholders (CSS theme tokens).
+- Documentation:
+  - CLAUDE.md: Stable concise context
+  - docs/constitution.md: Non-negotiable core rules (strict mobile-first responsiveness, zero horizontal overflow)
+  - docs/decisions.md: Why and what we chose
+  - docs/seo.md: Keywords, schema, checklists
+  - docs/content.md: Business info and verified copy
+  - docs/todo.md: Open questions and next tasks
+- Non-Negotiables: Strictly responsive down to 320px with mobile-first breakpoints, minimum 48px touch targets, zero horizontal scroll, and Green Core Web Vitals.
+- Working Protocol: Read context before starting, log uncertainties in docs/todo.md, make small reviewable changes, update docs upon completion.

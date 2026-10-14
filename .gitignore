@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# original full-size photos (60 MB). Kept on disk only; the built copies in public/img are what the site serves
+/assets-source/
