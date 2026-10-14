@@ -78,7 +78,7 @@ This document tracks undecided items, open questions for the client, and immedia
 
 ## SEO follow-ups (2026-10-14)
 - [ ] Client to supply real per-sq-ft rates, then add a price section to the cost post and the FAQs (nothing is quoted today).
-- [ ] Real project photos: then un-noindex `/gallery`, restore it to the sitemap, set `illustration={false}` on `BeforeAfterSlider`.
+- [ ] Real project photos: then un-noindex `/gallery`, restore it to the sitemap, (the "Illustration" chip on the slider is already removed).
 - [x] State pages are indexable and in the sitemap (2026-10-14, client request). Still worth deepening each with real local detail (cities served, delivery) for ranking.
 - [ ] Post images (`image` on blog posts) once real photos exist.
 - [ ] Google Business Profile: owner and set-up (see docs/seo.md).

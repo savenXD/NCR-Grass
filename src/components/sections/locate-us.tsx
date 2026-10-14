@@ -1,12 +1,11 @@
 import { MapPin, Navigation, Phone } from "lucide-react"
-import { MapEmbed } from "@/components/shared/map-embed"
 import { GoogleIcon } from "@/components/shared/google-icon"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { directionsHref, location, phoneHref, site } from "@/lib/site"
 
 /**
  * Full-width Google Maps embed with an address card floating over its corner (desktop)
- * or overlapping its bottom edge (mobile). The map itself loads on tap (MapEmbed).
+ * or overlapping its bottom edge (mobile). The iframe lazy-loads as it nears the viewport (no tap needed).
  */
 export function LocateUs() {
   return (
@@ -23,7 +22,14 @@ export function LocateUs() {
           <div className="relative overflow-hidden rounded-[2rem] border border-primary/25 bg-[oklch(0.2_0.03_150)] shadow-xl sm:h-[36rem]">
             {/* The pin is the iframe's exact centre. On phones the map has its own box and the card sits below it, so nothing covers the pin */}
             <div className="relative h-[24rem] sm:absolute sm:inset-0 sm:h-auto">
-              <MapEmbed src={location.embedSrc} title={`${site.name} location on Google Maps`} />
+              <iframe
+                src={location.embedSrc}
+                title={`${site.name} location on Google Maps`}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute inset-0 size-full border-0"
+              />
             </div>
             <div className="relative z-10 m-3 overflow-hidden rounded-[1.75rem] border border-white/15 bg-black/45 p-5 text-white backdrop-blur-xl backdrop-saturate-125 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.18),inset_0_-1px_0_rgba(255,255,255,0.04)] sm:absolute sm:bottom-6 sm:left-6 sm:m-0 sm:w-[25rem] sm:p-6">
               {/* Liquid-glass highlights */}
@@ -49,7 +55,7 @@ export function LocateUs() {
                   href={directionsHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-accent px-5 text-base font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+                  className="inline-flex h-12 min-w-0 flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-accent px-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 min-[380px]:px-5 min-[380px]:text-base"
                 >
                   <Navigation className="size-4" aria-hidden="true" />
                   Get directions
@@ -57,7 +63,7 @@ export function LocateUs() {
                 <a
                   href={phoneHref}
                   aria-label={`Call ${site.name} on ${site.phoneDisplay}`}
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/30 px-5 text-base font-semibold text-white transition-colors hover:bg-white/10"
+                  className="inline-flex h-12 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/30 px-4 text-sm font-semibold text-white transition-colors hover:bg-white/10 min-[380px]:px-5 min-[380px]:text-base"
                 >
                   <Phone className="size-4" aria-hidden="true" />
                   Call

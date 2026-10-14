@@ -211,7 +211,7 @@ export function AudienceShowcase({ header }: { header: ReactNode }) {
         {/* sticker */}
         <span
           aria-hidden="true"
-          className="absolute right-0 -top-5 z-10 flex size-[4.5rem] rotate-12 items-center justify-center rounded-full bg-accent p-2 text-center text-[10px] font-extrabold uppercase leading-tight tracking-wide text-accent-foreground shadow-lg sm:-right-3 sm:size-24 sm:text-xs"
+          className="absolute -right-2 -top-[3.75rem] z-10 flex size-[4.5rem] rotate-12 items-center justify-center rounded-full bg-accent p-2 text-center text-[10px] font-extrabold uppercase leading-tight tracking-wide text-accent-foreground shadow-lg sm:-right-6 sm:-top-[5.5rem] sm:size-24 sm:text-xs"
         >
           Drag to compare
         </span>

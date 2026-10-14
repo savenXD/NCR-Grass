@@ -194,3 +194,9 @@ New enquiries now trigger a push notification on the owner's installed admin app
 
 ## 18. PWA icon and splash colours (2026-10-14)
 Admin app icon = white emblem (`public/logo.svg`) on **black** (`#000000`), at 192 / 512 / maskable / 180 (apple-touch). `background_color` (Android opening screen) and `theme_color` (status bar) are black in `public/admin/manifest.webmanifest` and `admin/layout.tsx`; iOS status bar style is `black`. Change the colour in one place (`BG` in `scripts/admin-icons.mjs`, then `node scripts/admin-icons.mjs`) and keep the manifest and layout values in sync. Installed copies keep the old icon until the app is removed and installed again (iPhone) or the phone refreshes it (Android). iOS ignores the manifest splash colour and shows its own plain launch screen (a custom one needs a set of per-device startup images; not done).
+
+## 19. Map loads by itself again (2026-10-14, client request)
+The click-to-load facade (`shared/map-embed.tsx`, §11/§15) was removed: the Google Maps iframe in `locate-us.tsx` is a normal `loading="lazy"` iframe, so it loads as it nears the viewport without a tap (still not on first paint). Privacy policy wording updated to match. "Get directions" / "Call" buttons never wrap: `whitespace-nowrap`, smaller text and padding below 380 px.
+
+## 20. Before/after slider: handle-only (2026-10-14, client request)
+The slider no longer reacts to touches on the photo (the invisible full-size range input caused mis-slides and fought with page scrolling). Only the circular handle moves it: pointer-drag with pointer capture (`touch-none` on the handle only, so the page still scrolls over the photo), plus keyboard (arrows / Home / End) via `role="slider"`. The handle is kept between 3% and 97% so it can always be grabbed. The "Illustration" chip is gone (prop removed), and the "Drag to compare" sticker sits further outside the image corner. Note: the AI-image notice still lives on `/disclaimer`.

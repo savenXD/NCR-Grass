@@ -2,7 +2,7 @@
  * Plain-language legal pages. Every statement must match how the site actually works today:
  * - Quote form collects name, mobile, city/area, optional lawn size (src/lib/quote-schema.ts)
  * - Enquiries are stored in Google Cloud Firestore (src/lib/firebase-admin.ts) and read in the password-protected /admin app
- * - The site is hosted on Vercel; no analytics, ad trackers or first-party cookies; Google Maps loads only after a tap; WhatsApp links
+ * - The site is hosted on Vercel; no analytics, ad trackers or first-party cookies; Google Maps embed (lazy-loaded); WhatsApp links
  * UPDATE THESE if analytics, email delivery, cookies, other storage or new third parties are added.
  * Client should have them reviewed by a legal advisor (docs/todo.md).
  */
@@ -60,7 +60,7 @@ export const privacyPolicy: LegalSection[] = [
     title: "Cookies and tracking",
     paragraphs: [
       "This website does not set its own cookies and does not use analytics or advertising trackers.",
-      "The home page has an embedded Google Map that loads only after you tap it. Once loaded, Google may collect information and set cookies under Google's own privacy policy. Clicking a WhatsApp or phone link opens that app, and its own terms apply.",
+      "The home page has an embedded Google Map. When it loads, Google may collect information and set cookies under Google's own privacy policy. Clicking a WhatsApp or phone link opens that app, and its own terms apply.",
       "Like most websites, the server that hosts this site may automatically record technical details such as your IP address, browser type and the pages you request. These logs are used to run and protect the website.",
     ],
   },
