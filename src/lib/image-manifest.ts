@@ -208,6 +208,126 @@ export const imageManifest: Record<string, ImageEntry> = {
     ],
     "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAsAA4BaJbACdAENX7CKiSvKAAD+86GE9e6xX6wlC6TM1A5y/aU2xOenBI8eunig117x0EoT9DOBOzSj4viWmY6OC1GZbLNCQUxBZGHr97KKLNWkbAAA"
   },
+  "gallery/lawn-01": {
+    "w": 6000,
+    "h": 4000,
+    "widths": [
+      400,
+      640,
+      960,
+      1280,
+      1600
+    ],
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAsAA4BaJZgCdAEPhTWw/yAA/tUX00BSYn22RC1JJE+N6e+fqM3KuhvuRvoC7lHeCYpmT0SpXOEaTGCOsAAA"
+  },
+  "gallery/lawn-02": {
+    "w": 6000,
+    "h": 4000,
+    "widths": [
+      400,
+      640,
+      960,
+      1280,
+      1600
+    ],
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAsAA4BaJZACdAEMMGI3wAD+6zbjVb6gAXbK7LkEOOH9vYZBx+j9J3MEddkE1oP9pvNM9GJUrnMbfjI1IgAA"
+  },
+  "gallery/lawn-03": {
+    "w": 6000,
+    "h": 4000,
+    "widths": [
+      400,
+      640,
+      960,
+      1280,
+      1600
+    ],
+    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAsAA4BaJZACdAEQ+pQ4fuAA4nqML6IRVAMKf50GsRsVdtHNAjgQyHlgjg1Jj7vdaKQg/sKbg/k0AAA="
+  },
+  "gallery/lawn-04": {
+    "w": 6000,
+    "h": 4000,
+    "widths": [
+      400,
+      640,
+      960,
+      1280,
+      1600
+    ],
+    "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAsAA4BaJYgCdAEeetQLUAD+0lZBns9lk26Qo9gdNEFDO9akAyzyEivZAojkmwcvMzSkqIwAAA=="
+  },
+  "gallery/lawn-05": {
+    "w": 6000,
+    "h": 4000,
+    "widths": [
+      400,
+      640,
+      960,
+      1280,
+      1600
+    ],
+    "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAAsAA4BaJQBOgCIF7kImgADiBx7VsBraC1HtcmxOYhP5fKM7NEiMjJOWs6+vEAA="
+  },
+  "gallery/lawn-06": {
+    "w": 6000,
+    "h": 4000,
+    "widths": [
+      400,
+      640,
+      960,
+      1280,
+      1600
+    ],
+    "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAQCdASoQAAsAA4BaJYgCdAEVz12pbgAA/syUqgl6MPxeu2/hpac6r+vM9tGNgAA="
+  },
+  "gallery/lawn-07": {
+    "w": 6000,
+    "h": 4000,
+    "widths": [
+      400,
+      640,
+      960,
+      1280,
+      1600
+    ],
+    "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoQAAsAA4BaJQBOgCPuBLjV0AAA8qbSddaAvjWVCdZja3oimTQKvGtwdgdZ1EGKwg80lQfTWMEAAA=="
+  },
+  "gallery/lawn-08": {
+    "w": 6000,
+    "h": 4000,
+    "widths": [
+      400,
+      640,
+      960,
+      1280,
+      1600
+    ],
+    "blur": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADwAQCdASoQAAsAA4BaJQBOgCHiEzdpOkAA/vBv5kwmX9/JZzrOsmpUC4vMWOV4UftZeAAA"
+  },
+  "gallery/lawn-09": {
+    "w": 6000,
+    "h": 4000,
+    "widths": [
+      400,
+      640,
+      960,
+      1280,
+      1600
+    ],
+    "blur": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoQAAsAA4BaJQBOgCHHnVUAAPyP9i0JfKvmCqLXy6UGCoF9lReCrYTlNsGfEXAA"
+  },
+  "gallery/lawn-10": {
+    "w": 6000,
+    "h": 4000,
+    "widths": [
+      400,
+      640,
+      960,
+      1280,
+      1600
+    ],
+    "blur": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoQAAsAA4BaJQBOgCHcb2TPAAD+W/6vRuLKLOP7SpLBNbRcUsiPrfCo7Bmif7Q2ICAAAA=="
+  },
   "owner/arjun-yadav": {
     "w": 1254,
     "h": 1254,

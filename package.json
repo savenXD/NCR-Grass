@@ -9,6 +9,7 @@
     "lint": "eslint",
     "seo:check": "node scripts/seo-check.mjs",
     "images": "node scripts/build-images.mjs",
+    "videos": "node scripts/build-videos.mjs",
     "vapid": "node scripts/vapid.mjs",
     "perf": "node scripts/perf.mjs",
     "preview": "next build && next start"
