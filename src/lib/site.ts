@@ -40,7 +40,9 @@ export const directionsHref = `https://www.google.com/maps/dir/?api=1&destinatio
 export const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "Meet the Owner", href: "/meet-the-owner" },
   { name: "Services", href: "/services" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Service Areas", href: "/service-areas" },
   { name: "Blog", href: "/blog" },
   { name: "FAQ", href: "/faq" },
@@ -58,7 +60,9 @@ export const legalLinks = [
 export const footerLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "Meet the Owner", href: "/meet-the-owner" },
   { name: "Services", href: "/services" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Service Areas", href: "/service-areas" },
   { name: "Blog", href: "/blog" },
   { name: "FAQ", href: "/faq" },

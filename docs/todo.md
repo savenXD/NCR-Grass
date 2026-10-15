@@ -78,7 +78,7 @@ This document tracks undecided items, open questions for the client, and immedia
 
 ## SEO follow-ups (2026-10-14)
 - [ ] Client to supply real per-sq-ft rates, then add a price section to the cost post and the FAQs (nothing is quoted today).
-- [ ] Real project photos: then un-noindex `/gallery`, restore it to the sitemap, (the "Illustration" chip on the slider is already removed).
+- [ ] Real project photos: drop them in `assets-source/images/gallery/` and run `npm run images` (`/gallery` then indexes itself and joins the sitemap), (the "Illustration" chip on the slider is already removed).
 - [x] State pages are indexable and in the sitemap (2026-10-14, client request). Still worth deepening each with real local detail (cities served, delivery) for ranking.
 - [ ] Post images (`image` on blog posts) once real photos exist.
 - [ ] Google Business Profile: owner and set-up (see docs/seo.md).
@@ -99,3 +99,8 @@ This document tracks undecided items, open questions for the client, and immedia
 - [ ] Search Console + Bing: verify domain, submit `https://ncrgrass.in/sitemap.xml`.
 - [ ] Commit the project to git (`assets-source/` is now in .gitignore: back that 60 MB folder up elsewhere).
 - [ ] On the owner's phone: install the admin app, allow notifications, submit a test enquiry on the live site and confirm the alert arrives (iPhone: Home Screen app only).
+
+## Meet the Owner (2026-10-15)
+- [ ] Client to confirm or replace the invented placeholder copy in `src/lib/owner.ts`: quote, "how I work" cards, process steps, role title.
+- [ ] Confirm the portrait is a real photo (it looks AI-generated); a real photo suits an owner page better.
+- [ ] Decide whether Arjun wants his own phone number on this page instead of the business line.

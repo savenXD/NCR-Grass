@@ -201,3 +201,14 @@ The click-to-load facade (`shared/map-embed.tsx`, §11/§15) was removed: the Go
 
 ## 20. Before/after slider: handle-only (2026-10-14, client request)
 The slider no longer reacts to touches on the photo (the invisible full-size range input caused mis-slides and fought with page scrolling). Only the circular handle moves it: pointer-drag with pointer capture (`touch-none` on the handle only, so the page still scrolls over the photo), plus keyboard (arrows / Home / End) via `role="slider"`. The handle is kept between 3% and 97% so it can always be grabbed. The "Illustration" chip is gone (prop removed), and the "Drag to compare" sticker sits further outside the image corner. Note: the AI-image notice still lives on `/disclaimer`.
+
+## 10. Meet the Owner page (2026-10-15)
+- `/meet-the-owner`: hero, square portrait + name/role/intro + Call/WhatsApp buttons, facts strip (non-numeric: no experience, project or state counts), quote, "how I work" cards, process timeline, link strip, `PageCta`. Server-rendered, no client JS. Content lives in `src/lib/owner.ts`; sections in `owner-profile.tsx` and `owner-story.tsx`.
+- Portrait source `assets-source/images/owner/arjun-yadav.png`, built to AVIF/WebP by `npm run images` (new `owner` group). Never serve the PNG from `public/`.
+- JSON-LD: BreadcrumbList + ProfilePage/Person (`#owner`, `worksFor` the business `@id`). Added to sitemap, footer and a link on `/about`; not in the top nav (kept short).
+- Buttons use the business number; the WhatsApp text is addressed to Arjun.
+
+## 11. Gallery page returns (2026-10-15)
+- `/gallery` is back (nav, footer, mobile menu). Photos live in `assets-source/images/gallery/` (any number, any aspect ratio, not the site's existing images); run `npm run images` to build AVIF/WebP. `src/lib/gallery.ts` lists them, `gallery-grid.tsx` lays them out as a CSS-columns masonry using each photo's own aspect ratio (no cropping, no layout shift, no client JS). No captions, dates or controls by design.
+- With zero photos the page shows a "coming soon" note, is `noindex` and is left out of the sitemap; adding photos flips all three automatically.
+- Navbar links tightened (`text-[13px]`, `whitespace-nowrap`) so eight links fit at 1024px.

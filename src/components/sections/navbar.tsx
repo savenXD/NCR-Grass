@@ -14,7 +14,7 @@ export function Navbar() {
       >
         <Link
           href="/"
-          className="flex min-h-12 items-center gap-3 rounded-xl text-white drop-shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          className="flex min-h-12 shrink-0 items-center gap-3 whitespace-nowrap rounded-xl text-white drop-shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           <Image src="/logo.svg" alt="" width={48} height={48} className="size-10 object-contain sm:size-12" loading="eager" />
           <span className="text-xl font-bold tracking-tight sm:text-2xl">{site.name}</span>
@@ -26,7 +26,7 @@ export function Navbar() {
               <li key={item.name}>
                 <Link
                   href={item.href}
-                  className="inline-flex min-h-12 items-center px-2.5 text-sm font-medium text-white/90 drop-shadow-sm transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white xl:px-4"
+                  className="inline-flex min-h-12 items-center whitespace-nowrap px-2 text-[13px] font-medium xl:text-sm text-white/90 drop-shadow-sm transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white xl:px-3.5"
                 >
                   {item.name}
                 </Link>
@@ -35,7 +35,7 @@ export function Navbar() {
           </ul>
           <Link
             href="/contact"
-            className="hidden h-12 items-center gap-3 rounded-full bg-white py-1 pl-6 pr-1 text-sm font-semibold text-foreground shadow-md transition-colors hover:bg-accent hover:text-accent-foreground sm:inline-flex"
+            className="hidden h-12 shrink-0 items-center gap-3 whitespace-nowrap rounded-full bg-white py-1 pl-6 pr-1 text-sm font-semibold text-foreground shadow-md transition-colors hover:bg-accent hover:text-accent-foreground sm:inline-flex"
           >
             Contact Us
             <span className="flex size-10 items-center justify-center rounded-full bg-primary text-primary-foreground">

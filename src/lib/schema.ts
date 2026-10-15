@@ -8,6 +8,7 @@ import { cityLocations, stateLocations } from "@/lib/locations"
 import type { BlogPost } from "@/lib/blog-data"
 import { stripLinks } from "@/components/shared/inline-text"
 import { photoUrl } from "@/lib/photo"
+import { owner } from "@/lib/owner"
 
 /** What people call the product/service (docs/seo.md §3a). Used as schema hints, not as hidden text. */
 const termFamilies = [
@@ -147,3 +148,24 @@ export function blogPostingJsonLd(post: BlogPost) {
 /** Blog FAQs use the same shape as location FAQs. */
 export const blogFaqJsonLd = (post: BlogPost) =>
   faqJsonLd(post.faqs.map((f) => ({ q: f.question, a: stripLinks(f.answer) })))
+
+/** Founder profile page: a Person who founded the one business entity. */
+export function ownerJsonLd() {
+  return [
+    breadcrumbJsonLd([{ name: "Meet the Owner", path: "/meet-the-owner" }]),
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      mainEntity: {
+        "@type": "Person",
+        "@id": `${site.url}/#owner`,
+        name: owner.name,
+        jobTitle: owner.role,
+        image: abs("/img/owner/arjun-yadav-800.webp"),
+        url: abs("/meet-the-owner"),
+        worksFor: { "@id": businessId },
+        address: { "@type": "PostalAddress", ...site.postalAddress },
+      },
+    },
+  ]
+}

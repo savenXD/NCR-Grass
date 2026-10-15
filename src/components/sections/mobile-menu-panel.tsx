@@ -10,6 +10,8 @@ import {
   BookOpen,
   CircleHelp,
   House,
+  Images,
+  UserRound,
   Info,
   MapPin,
   MessageCircle,
@@ -25,7 +27,9 @@ import { navLinks, phoneHref, site, whatsappHref } from "@/lib/site"
 const icons: Record<string, LucideIcon> = {
   "/": House,
   "/about": Info,
+  "/meet-the-owner": UserRound,
   "/services": Sprout,
+  "/gallery": Images,
   "/service-areas": MapPin,
   "/blog": BookOpen,
   "/faq": CircleHelp,

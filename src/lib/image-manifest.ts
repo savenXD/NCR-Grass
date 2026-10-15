@@ -207,5 +207,16 @@ export const imageManifest: Record<string, ImageEntry> = {
       440
     ],
     "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAsAA4BaJbACdAENX7CKiSvKAAD+86GE9e6xX6wlC6TM1A5y/aU2xOenBI8eunig117x0EoT9DOBOzSj4viWmY6OC1GZbLNCQUxBZGHr97KKLNWkbAAA"
+  },
+  "owner/arjun-yadav": {
+    "w": 1254,
+    "h": 1254,
+    "widths": [
+      360,
+      560,
+      800,
+      1120
+    ],
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQAgCdASoQABAAA4BaJZQCw7pkAhMU8eMAAP7e7dByJirFac7SQ+RJCNd3HGlxXZ3lCCtNFn0Xo6LuYos2GtmCv6Kbf7xh0USrka8MS/vn/xuBeo+jp65jaeT3/A0Ju3i7lW4h+23hgAAA"
   }
 }

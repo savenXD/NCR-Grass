@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next"
 import { reasons, services, site } from "@/lib/site"
 import { locationHref, locations } from "@/lib/locations"
 import { blogPosts } from "@/lib/blog-data"
+import { galleryImages } from "@/lib/gallery"
 import { photoUrl } from "@/lib/photo"
 
 /** Bump when page content changes materially. Blog posts use their own publish date. */
@@ -13,7 +14,7 @@ const homeImages = [...services, ...reasons]
   .filter((src): src is string => Boolean(src))
   .map(photoUrl)
 
-const pages = ["", "/services", "/service-areas", "/about", "/faq", "/contact", "/blog"]
+const pages = ["", "/services", ...(galleryImages.length ? ["/gallery"] : []), "/service-areas", "/about", "/meet-the-owner", "/faq", "/contact", "/blog"]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

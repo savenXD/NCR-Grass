@@ -14,6 +14,9 @@ const groups = {
   "who-we-serve": { widths: [480, 720, 960, 1280], avif: { quality: 40, effort: 6 }, webp: { quality: 66, effort: 6 } },
   "why-choose-us": { widths: [480, 720, 960, 1280], avif: { quality: 40, effort: 6 }, webp: { quality: 66, effort: 6 } },
   about: { widths: [280, 440], avif: { quality: 42, effort: 6 }, webp: { quality: 68, effort: 6 } },
+  // Any aspect ratio, any count: drop files in assets-source/images/gallery and run `npm run images`
+  gallery: { widths: [400, 640, 960, 1280, 1600], avif: { quality: 45, effort: 6 }, webp: { quality: 72, effort: 6 } },
+  owner: { widths: [360, 560, 800, 1120], avif: { quality: 48, effort: 6 }, webp: { quality: 74, effort: 6 } },
 }
 
 // Incremental: a variant is rebuilt only if it is missing or older than its source (delete public/img to force a full rebuild)
@@ -29,7 +32,7 @@ let total = 0
 
 for (const [group, cfg] of Object.entries(groups)) {
   await mkdir(`${OUT}/${group}`, { recursive: true })
-  for (const file of (await readdir(`${SRC}/${group}`)).sort()) {
+  for (const file of (await readdir(`${SRC}/${group}`)).filter((f) => /\.(jpe?g|png|webp|avif|tiff?)$/i.test(f)).sort()) {
     const name = file.replace(/\.[^.]+$/, "")
     const input = sharp(`${SRC}/${group}/${file}`)
     const { width: W, height: H, hasAlpha } = await input.metadata()
